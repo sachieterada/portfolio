@@ -1,15 +1,47 @@
 import React from "react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { graphql } from "gatsby"
+import styles from "../styles/index.module.css"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-  </Layout>
+
+export default ({ data }) => (
+  <div>
+    <Layout>
+      <SEO title="Home" />
+      <div style={{ textAlign: `center`}}>
+      <h2>Sachie Terada</h2>
+      </div>
+      <h4>Biography</h4>
+      <p>
+        Hi, thanks for visiting my site.
+        I am a freelance front-end develper. I was born and raised in Fukuoka, Japan and lived in Australia for more than one year after graduating from uni.
+        I worked for an internet sales company for two years after I got back to Japan. I helped them start a new rental bike business, also customise and translate their website.
+        More than 3 years ago, I started learing web development by myself(sometimes with my friend).
+        Now I am working mostly on buiding websites for companies or individuals. Feel free to contact me via SNS or Blog.
+      </p>
+      <h4>Skills</h4>
+      <ul>
+        <li>HTML5 / CSS3</li>
+        <li>Responsive web design</li>
+      </ul>
+      <h4>Things I've been learning</h4>
+      <ul>
+        <li>JavaScript</li>
+        <li>Vue.js</li>
+        <li>React.js</li>
+        <li>Gatsby.js (*this website is made by Gatsby)</li>
+      </ul>
+    </Layout>
+  </div>
 )
 
-export default IndexPage
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
