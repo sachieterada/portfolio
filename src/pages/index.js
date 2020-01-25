@@ -1,16 +1,32 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
-import styles from "../styles/index.module.css"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
-
-export default ({ data }) => (
-  <div>
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      file(relativePath: {eq: "profile.png"}) {
+        childImageSharp{
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
     <Layout>
       <SEO title="Home" />
       <div style={{ textAlign: `center`}}>
-      <h2>Sachie Terada</h2>
+        <Img fluid={data.file.childImageSharp.fluid} />
+        <h2>Sachie Terada</h2>
       </div>
       <h4>Biography</h4>
       <p>
@@ -33,15 +49,5 @@ export default ({ data }) => (
         <li>Gatsby.js (*this website is made by Gatsby)</li>
       </ul>
     </Layout>
-  </div>
-)
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+  )
+}
