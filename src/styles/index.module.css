@@ -1,0 +1,11 @@
+h1,h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+.imgProfile {
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    box-shadow: 0px 4px 6px 2px lightgrey;
+    margin: 2.5rem auto 1rem;
+}

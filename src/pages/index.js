@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import styles from "../styles/index.module.css"
+
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -12,7 +14,7 @@ export default () => {
           title
         }
       }
-      file(relativePath: {eq: "profile.png"}) {
+      file(relativePath: {eq: "images/profile.png"}) {
         childImageSharp{
           fluid {
             ...GatsbyImageSharpFluid
@@ -25,8 +27,8 @@ export default () => {
     <Layout>
       <SEO title="Home" />
       <div style={{ textAlign: `center`}}>
-        <Img fluid={data.file.childImageSharp.fluid} />
-        <h2>Sachie Terada</h2>
+        <Img fluid={data.file.childImageSharp.fluid} className={styles.imgProfile} />
+        <h1>Sachie Terada</h1>
       </div>
       <h4>Biography</h4>
       <p>
