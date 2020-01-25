@@ -14,7 +14,7 @@ export default ({ data }) => {
         <Img fluid={featuredImgFluid} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <Link to="/blog/" style={{ textDecoration: `none`}}>Back to list</Link>
+      <Link to="/blog/" style={{ textDecoration: `none`, color: `#404040`, display: `flex`, justifyContent: `flex-end`}}>Back to list →</Link>
     </Layout>
   )
 }

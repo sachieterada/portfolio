@@ -1,0 +1,32 @@
+.container {
+  margin-bottom: 2.5rem;
+}
+
+.blogLink {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .7rem;
+}
+
+.title {
+  text-decoration: none;
+  color: #404040;
+
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.postDate {
+  display: flex;
+  align-self: flex-end;
+  color: #a1a1a7;
+  font-size: .8rem;
+}
+
+.content {
+  margin-top: .8rem;
+}
+
+.count {
+  text-align: right;
+}

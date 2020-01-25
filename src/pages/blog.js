@@ -3,26 +3,23 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styles from "../styles/blog.module.css"
 
 const Blog = ({ data }) => (
   <Layout>
     <SEO title="blog" />
-    <h1>blog</h1>
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id} style={{ marginBottom: `1rem`}}>
-            <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
-            <Link to={node.fields.slug} style={{ textDecoration: `none`, color: `inherit` }}>
-              <h3 style={{ marginTop: `0.5rem` }}>
-                {node.frontmatter.title}{" "}
-                <span style={{ color: `#bbb`}}>
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-            </Link>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
+    <h1>Blog</h1>
+    <h4 className={styles.count}>{data.allMarkdownRemark.totalCount} Posts</h4>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <div key={node.id} className={styles.container}>
+        <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+        <div className={styles.blogLink}>
+          <Link to={node.fields.slug} className={styles.title}>{node.frontmatter.title}</Link>
+          <span className={styles.postDate}>{node.frontmatter.date}</span>
+        </div>
+        <p className={styles.content}>{node.excerpt}</p>
+      </div>
+    ))}
   </Layout>
 )
 
