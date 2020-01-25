@@ -5,13 +5,12 @@
 .blogLink {
   display: flex;
   justify-content: space-between;
-  margin-top: .7rem;
+  margin-top: 1rem;
 }
 
 .title {
   text-decoration: none;
   color: #404040;
-
   font-weight: bold;
   font-size: 1.7rem;
 }
@@ -29,4 +28,5 @@
 
 .count {
   text-align: right;
+  margin-bottom: 1.5rem;
 }

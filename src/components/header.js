@@ -8,8 +8,8 @@ const Header = ({ siteTitle }) => (
     <div className={styles.container}>
       <h1 className={styles.title}>{siteTitle}</h1>
       <div className={styles.linkList}>
-        <Link to="/" className={styles.link}>Home</Link>
-        <Link to="/blog/" className={styles.link}>Blog</Link>
+        <Link to="/" className={styles.link} activeClassName={styles.activeLink}>Home</Link>
+        <Link to="/blog/" className={styles.link} activeClassName={styles.activeLink}>Blog</Link>
       </div>
     </div>
   </header>

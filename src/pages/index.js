@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styles from "../styles/index.module.css"
 
-
 export default () => {
   const data = useStaticQuery(graphql`
     query {
@@ -29,15 +28,19 @@ export default () => {
       <div style={{ textAlign: `center`}}>
         <Img fluid={data.file.childImageSharp.fluid} className={styles.imgProfile} />
         <h1>Sachie Terada</h1>
+        <h4 style={{ marginTop: `.8rem`}}>Frontend Engineer</h4>
       </div>
-      <h4>Biography</h4>
-      <p>
-        Hi, thanks for visiting my site.
-        I am a freelance front-end develper. I was born and raised in Fukuoka, Japan and lived in Australia for more than one year after graduating from uni.
-        I worked for an internet sales company for two years after I got back to Japan. I helped them start a new rental bike business, also customise and translate their website.
-        More than 3 years ago, I started learing web development by myself(sometimes with my friend).
-        Now I am working mostly on buiding websites for companies or individuals. Feel free to contact me via SNS or Blog.
-      </p>
+
+      <div>
+        <h4>Biography</h4>
+        <p>
+          Hi, thanks for visiting my portfolio site.
+          I am Frontend Engineer from Tokyo. I was born and raised in Shizuoka, Japan and moved to Tokyo after guraduated from uni.
+          I worked for an internet sales company for two years after I got back to Japan. I helped them start a new rental bike business, also customise and translate their website.
+          More than 3 years ago, I started learing web development by myself(sometimes with my friend).
+          Now I am working mostly on buiding websites for companies or individuals. Feel free to contact me via SNS or Blog.
+        </p>
+      </div>
       <h4>Skills</h4>
       <ul>
         <li>HTML5 / CSS3</li>

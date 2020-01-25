@@ -12,15 +12,21 @@
 }
 
 .link {
-  color: white;
+  color: #5b310f;
   text-decoration: none;
   width: auto;
   padding: 0.5rem;
 }
 
 a:hover {
-  color: #5b310f;
+  color: white;
 }
+
+.activeLink {
+  color: white;
+  text-decoration: none;
+}
+
 
 .linkList{
   display: flex;
