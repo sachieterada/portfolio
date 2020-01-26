@@ -5,7 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   pathPrefix: "/portfolio",
-  assetPrefix: "https://trdsce41215.github.io/portfolio",
+  assetPrefix: "https://trdsce41215.github.io/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

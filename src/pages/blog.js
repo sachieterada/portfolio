@@ -27,12 +27,11 @@ const Blog = ({ data }) => (
     ))}
   </Layout>
 )
-
 export default Blog
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC } limit: $limit skip: $skip) {
       totalCount
       edges {
         node {
