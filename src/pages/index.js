@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styles from "../styles/index.module.css"
+import { Link } from "gatsby"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -30,7 +31,6 @@ export default () => {
         <h1>Sachie Terada</h1>
         <h4 style={{ marginTop: `.8rem`}}>Front-end Engineer</h4>
       </div>
-
       <section className={styles.contents}>
         <div className={styles.contents_inner}>
           <h3 style={{ marginBottom: `1rem` }}>Biography</h3>
@@ -41,7 +41,6 @@ export default () => {
           </p>
         </div>
       </section>
-
       <section className={styles.contents2}>
         <div className={styles.contents_inner}>
           <h3 style={{ marginBottom: `1rem` }}>Skills</h3>
@@ -58,7 +57,20 @@ export default () => {
           </ul>
         </div>
       </section>
-
+      <section className={styles.contents}>
+        <div className={styles.contents_inner}>
+          <h3 style={{ marginBottom: `1rem` }}>Blog</h3>
+          <p style={{ marginBottom: `3rem`}}>
+            I write about life in Tokyo/Japan / travel / WebDevelopment / Design etc.<br /><br />
+            If you are interested, please check it out ;)<br />
+            Hope you enjoy it!
+          </p>
+          <Link to="/blog/" className={styles.link} activeClassName={styles.activeLink}>Go to blog</Link>
+        </div>
+      </section>
+      <div style={{ textAlign: `center`, marginTop: `2rem`}}>
+        <h2>Contact</h2>
+      </div>
     </Layout>
   )
 }
