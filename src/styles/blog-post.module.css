@@ -1,0 +1,10 @@
+.link{
+  text-decoration: none;
+  color: #404040;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a:hover {
+  color: #00587a;
+}
