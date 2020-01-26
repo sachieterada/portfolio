@@ -8,11 +8,16 @@ import styles from "../styles/blog.module.css"
 const Blog = ({ data }) => (
   <Layout>
     <SEO title="blog" />
-    <h1>Blog</h1>
+    <div style={{ textAlign: `center`, marginTop: `3rem`}}>
+      <h1 style={{ marginBottom: `2rem`}}>Blog</h1>
+      <h4>life / travel / WebDevelopment / Design</h4>
+    </div>
     <h4 className={styles.count}>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id} className={styles.container}>
-        <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+        <Link to={node.fields.slug} className={styles.link}>
+          <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+        </Link>
         <div className={styles.blogLink}>
           <Link to={node.fields.slug} className={styles.title}>{node.frontmatter.title}</Link>
           <span className={styles.postDate}>{node.frontmatter.date}</span>

@@ -61,16 +61,13 @@ export default () => {
         <div className={styles.contents_inner}>
           <h3 style={{ marginBottom: `1rem` }}>Blog</h3>
           <p style={{ marginBottom: `3rem`}}>
-            I write about life in Tokyo/Japan / travel / WebDevelopment / Design etc.<br /><br />
+            I write about life / travel / WebDevelopment / Design etc.<br /><br />
             If you are interested, please check it out ;)<br />
             Hope you enjoy it!
           </p>
           <Link to="/blog/" className={styles.link} activeClassName={styles.activeLink}>Go to blog</Link>
         </div>
       </section>
-      <div style={{ textAlign: `center`, marginTop: `2rem`}}>
-        <h2>Contact</h2>
-      </div>
     </Layout>
   )
 }
