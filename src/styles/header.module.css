@@ -8,17 +8,17 @@
 
 .title {
   margin: 0;
-  color: #5b310f !important;
+  color: #011931 !important;
 }
 
 .link {
-  color: #5b310f;
+  color: #011931;
   text-decoration: none;
   width: auto;
   padding: 0.5rem;
 }
 
-a:hover {
+.link:hover {
   color: white;
 }
 

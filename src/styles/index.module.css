@@ -7,5 +7,108 @@ h1,h2, h3, h4, h5 {
     width: 190px;
     height: 190px;
     box-shadow: 0px 4px 6px 2px lightgrey;
-    margin: 2.5rem auto 1rem;
+    margin: 3rem auto 1rem;
+}
+
+.contents {
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0;
+    padding: 50px 0;
+  }
+
+.contents:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 80%;
+  margin: 3% -10% 0;
+  background: #e9967a;
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-right3deg);
+  z-index: -1;
+}
+.contents:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 80%;
+  margin: 3% -10% 0;
+  background: #011931;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  z-index: -1;
+}
+
+.contents_inner {
+  box-sizing: boder-box;
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 100px 10px 120px;
+  color: #fff;
+  text-align: left;
+}
+
+.contents_inner p{
+  font-size: 0.9rem;
+}
+
+.contents_inner li {
+  margin-bottom: .1rem;
+  }
+
+.contents2 {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+  padding: 30px 0;
+}
+
+.contents2:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 120%;
+height: 80%;
+margin: 3% -10% 0;
+background: #e9967a;
+-webkit-transform-origin: left center;
+-ms-transform-origin: left center;
+transform-origin: left center;
+-webkit-transform: rotate(3deg);
+-ms-transform: rotate(3deg);
+transform: rotate(3deg);
+z-index: -1;
+}
+.contents2:after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 120%;
+height: 80%;
+margin: 3% -10% 0;
+background: #011931;
+-webkit-transform-origin: right center;
+-ms-transform-origin: right center;
+transform-origin: right center;
+-webkit-transform: rotate(-3deg);
+-ms-transform: rotate(-3deg);
+transform: rotate(-right3deg);
+z-index: -1;
 }

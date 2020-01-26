@@ -28,31 +28,37 @@ export default () => {
       <div style={{ textAlign: `center`}}>
         <Img fluid={data.file.childImageSharp.fluid} className={styles.imgProfile} />
         <h1>Sachie Terada</h1>
-        <h4 style={{ marginTop: `.8rem`}}>Frontend Engineer</h4>
+        <h4 style={{ marginTop: `.8rem`}}>Front-end Engineer</h4>
       </div>
 
-      <div>
-        <h4>Biography</h4>
-        <p>
-          Hi, thanks for visiting my portfolio site.
-          I am Frontend Engineer from Tokyo. I was born and raised in Shizuoka, Japan and moved to Tokyo after guraduated from uni.
-          I worked for an internet sales company for two years after I got back to Japan. I helped them start a new rental bike business, also customise and translate their website.
-          More than 3 years ago, I started learing web development by myself(sometimes with my friend).
-          Now I am working mostly on buiding websites for companies or individuals. Feel free to contact me via SNS or Blog.
-        </p>
-      </div>
-      <h4>Skills</h4>
-      <ul>
-        <li>HTML5 / CSS3</li>
-        <li>Responsive web design</li>
-      </ul>
-      <h4>Things I've been learning</h4>
-      <ul>
-        <li>JavaScript</li>
-        <li>Vue.js</li>
-        <li>React.js</li>
-        <li>Gatsby.js (*this website is made by Gatsby)</li>
-      </ul>
+      <section className={styles.contents}>
+        <div className={styles.contents_inner}>
+          <h3 style={{ marginBottom: `1rem` }}>Biography</h3>
+          <p>
+            Hi, thanks for visiting my portfolio site.<br />
+            I am Front-end Engineer from Tokyo. I was born and raised in Shizuoka, Japan and moved to Tokyo after graduating from uni.<br /><br />
+            From 2019, I started learing front-end development by myself.<br /><br />
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.contents2}>
+        <div className={styles.contents_inner}>
+          <h3 style={{ marginBottom: `1rem` }}>Skills</h3>
+          <ul>
+            <li><p>HTML5 / CSS3</p></li>
+            <li><p>JavaScript</p></li>
+            <li><p>Responsive web design</p></li>
+          </ul>
+          <h3 style={{ marginBottom: `1rem` }}>Things I've been learning</h3>
+          <ul>
+            <li><p>Vue.js</p></li>
+            <li><p>React.js</p></li>
+            <li><p>Gatsby.js (*this website is made by Gatsby)</p></li>
+          </ul>
+        </div>
+      </section>
+
     </Layout>
   )
 }
