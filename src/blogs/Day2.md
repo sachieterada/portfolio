@@ -1,6 +1,6 @@
 ---
 title: "Shinjuku"
-date: "2020-01-22"
+tags: ["Tokyo", "Shinjuku", "sightseeing"] date: "2020-01-22"
 featuredImage: ../images/shinjuku.png
 ---
 

@@ -13,6 +13,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+const _ = require("lodash")
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
@@ -23,7 +24,15 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              tags
+            }
           }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -37,6 +46,15 @@ exports.createPages = async ({ graphql, actions }) => {
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
+    })
+  })
+  result.data.tagsGroup.group.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: path.resolve(`./src/templates/tags.js`),
+      context: {
+        tag: tag.fieldValue,
+      }
     })
   })
 }

@@ -1,5 +1,6 @@
 ---
 title: "The Red Gate @Fushimi inari shrine in Kyoto"
+tags: ["Kyoto", "sightseeing", "shrine"]
 date: "2020-01-25"
 featuredImage: ../images/inarishrine.png
 ---

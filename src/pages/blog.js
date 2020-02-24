@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tags from "../components/tags"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styles from "../styles/blog.module.css"
@@ -12,6 +13,7 @@ const Blog = ({ data }) => (
       <h1 style={{ marginBottom: `2rem`}}>Blog</h1>
       <h4>life / travel / WebDevelopment / Design</h4>
     </div>
+    <Tags />
     <h4 className={styles.count}>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id} className={styles.container}>
@@ -47,6 +49,7 @@ export const query = graphql`
                 }
               }
             }
+            tags
           }
           fields {
             slug

@@ -12,6 +12,7 @@ export default ({ data }) => {
     <Layout>
       <div style={{ margin: `3rem 0 5rem`}}>
         <h2>{post.frontmatter.title}</h2>
+        <p>{post.frontmatter.tags.map }</p>
         <Img fluid={featuredImgFluid} style={{ margin: `2rem 0`}} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
@@ -26,6 +27,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        tags
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {

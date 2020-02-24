@@ -1,5 +1,6 @@
 ---
 title: "Pinic @Shinjuku-gyoen"
+tags: ["Tokyo", "Shinjuku", "sightseeing", "park"]
 date: "2020-01-24"
 featuredImage: ../images/shinjukugyoen.png
 ---

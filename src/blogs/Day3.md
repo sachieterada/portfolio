@@ -1,5 +1,6 @@
 ---
 title: "SAKURA @Nakameguro riverside"
+tags: ["Tokyo", "Nakameguro", "sightseeing", "spring"]
 date: "2020-01-23"
 featuredImage: ../images/sakura.png
 ---

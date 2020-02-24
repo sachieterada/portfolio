@@ -1,5 +1,6 @@
 ---
 title: "Tokyo tower"
+tags: ["Tokyo", "sightseeing"]
 date: "2020-01-21"
 featuredImage: ../images/tokyotower.png
 ---

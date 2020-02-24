@@ -1,5 +1,6 @@
 ---
-title: "Itsukushima shirine "
+title: "Itsukushima shirine"
+tags: ["Hiroshima", "sightseeing", "shrine"]
 date: "2020-01-26"
 featuredImage: ../images/itsukushimashrine.png
 ---
