@@ -1,0 +1,23 @@
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tags div{
+    margin: 3px;
+}
+
+.blogTag {
+    text-decoration: none;
+    background: #011931;
+    vertical-align: middle;
+    border-radius: 8px;
+    color: #FFF;
+    padding: .24rem .5rem;
+  }
+  .blogTag:before {
+    content: '●';
+    margin-right: .1rem;
+    color: #FFF;
+  }

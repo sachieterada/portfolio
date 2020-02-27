@@ -14,10 +14,10 @@ const Tags = ({
 }) => (
   <div>
     <Helmet title={title} />
-    <div>
+    <div className={styles.tags}>
       {group.map(tag => (
         <div key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className={styles.blogTag}>
             {tag.fieldValue} ({tag.totalCount})
           </Link>
         </div>
@@ -25,7 +25,6 @@ const Tags = ({
     </div>
   </div>
 )
-
 export default props => (
   <StaticQuery
     query ={graphql`

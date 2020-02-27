@@ -9,7 +9,7 @@ import styles from "../styles/blog.module.css"
 const Blog = ({ data }) => (
   <Layout>
     <SEO title="blog" />
-    <div style={{ textAlign: `center`, marginTop: `3rem`}}>
+    <div style={{ textAlign: `center`, margin: `3rem 0 2rem`}}>
       <h1 style={{ marginBottom: `2rem`}}>Blog</h1>
       <h4>life / travel / WebDevelopment / Design</h4>
     </div>
